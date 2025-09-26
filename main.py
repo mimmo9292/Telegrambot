@@ -4,7 +4,10 @@ from ta.trend import EMAIndicator
 from ta.momentum import RSIIndicator
 from telegram import Bot
 from telegram.error import TelegramError
-from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+import os
+
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 import asyncio
 import time
 import logging
